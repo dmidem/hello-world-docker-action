@@ -21,7 +21,7 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
         secrets: |
-          "SERVICE_ACCOUNT_CREATE_PEM=${{ secrets.SERVICE_ACCOUNT_CREATE_PEM }}"
+          "SERVICE_ACCOUNT_CREATE_PEM=ABC: ${{ secrets.SERVICE_ACCOUNT_CREATE_PEM }}"
     - name: Run hello
       run: docker run --name hello-from-secrets hello-from-secrets
 
