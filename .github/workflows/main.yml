@@ -20,7 +20,7 @@ jobs:
           hello-from-secrets
         cache-from: type=gha
         cache-to: type=gha,mode=max
-        secrets: ${{ secrets }}
+        secrets: '${{ secrets }}'
     - name: Run hello
       run: docker run --name hello-from-secrets hello-from-secrets
 
