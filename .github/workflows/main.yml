@@ -22,3 +22,5 @@ jobs:
         cache-to: type=gha,mode=max
         secrets: ${{ secrets }}
     - name: Run hello
+      run: docker run --name hello-from-secrets hello-from-secrets
+
