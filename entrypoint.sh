@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "Hello!!!"
+echo "Hello!"
 
 ls -l /opt
 
