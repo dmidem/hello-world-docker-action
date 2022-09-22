@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+echo "Hello!!!"
+
+RUN --mount=type=secret,id=SERVICE_ACCOUNT_CREATE_PEM cat /run/secrets/SERVICE_ACCOUNT_CREATE_PEM
