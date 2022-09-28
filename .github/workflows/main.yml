@@ -20,9 +20,10 @@ jobs:
           hello-from-secrets
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        #${{ secrets.SERVICE_ACCOUNT_CREATE_PEM }}
         secrets: |
-          SERVICE_ACCOUNT_CREATE_PEM: ${{ secrets.SERVICE_ACCOUNT_CREATE_PEM }}
-          SERVICE_ACCOUNT_BACKUP_PEM: ${{ secrets.SERVICE_ACCOUNT_BACKUP_PEM }}
+          SERVICE_ACCOUNT_CREATE_PEM="abc"
+          SERVICE_ACCOUNT_BACKUP_PEM="def"
     - name: Run hello
       run: docker run --name hello-from-secrets hello-from-secrets
 
